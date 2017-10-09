@@ -126,7 +126,13 @@ class ProductosController extends SecuredController
       $j++;
     }
   }
-  $this->view->mostrarProductos($productos, $marcas);
+  $usuario = false;
+    session_start();
+    if (isset($_SESSION['usuario'])) { // pregunto si tengo un usuario
+      $usuario = true;
+    }  
+ 
+    $this->view->mostrarProductos($productos, $marcas, $usuario);
 }
 
 public function edit()
