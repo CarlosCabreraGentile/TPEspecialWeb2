@@ -44,7 +44,7 @@ class LoginController extends Controller
   {
     session_start();
     session_destroy();
-    header('Location: '.HOME);
+    $this->view->mostrarLogin();
     die();
   }
 }

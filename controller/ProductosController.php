@@ -16,7 +16,7 @@ class ProductosController extends SecuredController
   public function index()
   {
     $usuario = null;
-    session_start();
+    //session_start();
     if (isset($_SESSION['usuario'])) { // pregunto si tengo un usuario
       $usuario = $_SESSION['usuario'];
     }  
@@ -50,7 +50,7 @@ class ProductosController extends SecuredController
       }
     }
     $usuario = false;
-    session_start();
+    //session_start();
     if (isset($_SESSION['usuario'])) { // pregunto si tengo un usuario
       $usuario = true;
     }  
