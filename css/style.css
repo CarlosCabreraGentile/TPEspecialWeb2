@@ -1,3 +1,4 @@
+
 .contenedor{
     background:url(../img/bg3.jpg);
     width: 100%;
@@ -154,6 +155,13 @@ h1 {
 }
 
 .formulario ul li a {
+    color: #fff;
+    font-size: 20px;
+    font-family: 'robotothin', "Lucida Sans Unicode";
+
+}
+
+.formulario h3 a {
     color: #fff;
     font-size: 20px;
     font-family: 'robotothin', "Lucida Sans Unicode";
@@ -343,6 +351,10 @@ p{
 .filtrar {
     color: white;
 }
+
+#loginError{
+    visibility: hidden;
+}
 .table-striped>tbody>tr:nth-of-type(odd) {
     background-color: rgba(181, 181, 181, 0.76);
 }
@@ -362,6 +374,7 @@ p{
 
 .form-group {
     margin-bottom: 5px;
+    color: white;
 }
 
 .footer_redes a {
@@ -426,5 +439,5 @@ p{
 
         font-size: 150%;
     }
- 
+
 }

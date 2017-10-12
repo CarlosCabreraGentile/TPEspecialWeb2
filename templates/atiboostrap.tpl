@@ -13,7 +13,6 @@
           A la empresa se le ha conocido por varios nombres. Se fundó llamándose Array Technology Inc., pero durante los primeros 5 meses se le cambió a Array Technologies Inc., el 18 de diciembre de 1985
           pasó a llamarse ATI Technologies Inc., y definitivamente paso a ser parte de AMD el 25 de octubre de 2006.
           ATI tiene su sede en Markham, Ontario, en Canadá. Su plantilla laboral, de acuerdo con su sitio web corporativo, es de 3.300 empleados directos en el continente americano, Europa y Asia. Aunque la manufactura de los productos de ATI se realiza principalmente en Canadá y Taiwán.
-
         </p>
       </div>
 

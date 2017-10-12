@@ -14,15 +14,21 @@ class ConfigApp
       'comparativaNormal'=> 'ProductosController#comparativa',
       'agregarProducto'=> 'ProductosController#create',
       'guardarProducto'=> 'ProductosController#store',
+      "guardarMarca"=> 'ProductosController#agregarMarca',
       'borrarProducto' => 'ProductosController#destroy',
-      'finalizarProducto' => 'ProductosController#finish',
+      'borrarMarca' => 'ProductosController#destroyMarca',
       'filtrar' => 'ProductosController#filtro',
-      'editarProducto' => 'ProductosController#edit',//BOTON QUE INICIA LA EDICION
-      'editar' => 'ProductosController#editar',
+      'editarProducto' => 'ProductosController#edit', //ABRE LA VENTANA PARA EDITAR
+      'comienzoEditarMarca' => 'ProductosController#comienzoEditMarca',
+      'editarMarca'=>'ProductosController#editarMarca',
+      'editar' => 'ProductosController#editar',//EDITA EL PRODUCTO
       'filtrar' => 'ProductosController#filtro',
       'login' => 'LoginController#index',
       'verificarUsuario' => 'LoginController#verify',
-      'logout' => 'LoginController#destroy'
+      'logout' => 'LoginController#destroy',
+      'sesionExpirada' => 'LoginController#expirada',
+       'body'=>'ProductosController#traemeElbody',
+
     ];
 
 }

@@ -9,7 +9,6 @@ class LoginController extends Controller
   {
     $this->view = new LoginView();
     $this->model = new LoginModel();
-    //$this->controllerProduct = new ProductosController();
   }
 
   public function index()
@@ -18,7 +17,7 @@ class LoginController extends Controller
   //  echo password_hash('654321', PASSWORD_DEFAULT);//DE ESTA FORMA VEO EL PASSWORD ENCRIPTADO EN SHA1
   //  password: //$2y$10$mX0CJe.TzCawcbgGb1x4h.GLC4ZYlqCtqtjI85vaqmxc/kmNbX9s.//
   }
-
+    /*FUNCION Q VERIFICA EL USUARIO*/
   public function verify()
   {
     $userName = $_POST['usuario'];
@@ -32,21 +31,22 @@ class LoginController extends Controller
         $_SESSION['LAST_ACTIVITY'] = time();
         header('Location: '.HOME);
         die();
-            //$this->controllerProduct->comparativa();
+        $this->controllerProduct->comparativa();
       }
       else{
-        $this->view->mostrarLogin('Usuario o Password incorrectos');
+        echo("User pass error");
       }
     }
   }
-
+    /*FUNCION PARA TERMINAR SESION*/
   public function destroy()
   {
     session_start();
     session_destroy();
-    $this->view->mostrarLogin();
+    $this->view->mostrarsesionExpirada();
     die();
   }
+
 }
 
 

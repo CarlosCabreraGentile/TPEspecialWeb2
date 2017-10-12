@@ -25,20 +25,16 @@
     <td><p>{$producto['consumo']}</p></td>
     <td>
       <div class="col-xs-12 col-sm-12 col-md-12">
-      
-        
-          <a href="borrarProducto/{$producto['id']}">
-           <p><span id="borrar" class="fa fa-trash-o " aria-hidden="true" value="0"></span></p>
-          </a>
-       
+        <a href="borrarProducto/{$producto['id']}">
+          <p><span id="borrar" class="fa fa-trash-o " aria-hidden="true" value="0"></span></p>
+        </a>
       </div>
     </td>
   </tr>
   {/foreach}
 </table>
 </div>
-
-  </div>
+</div>
 </div>
 </div>
 <div class="row">
