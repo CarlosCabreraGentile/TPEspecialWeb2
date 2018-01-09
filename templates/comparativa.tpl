@@ -27,7 +27,8 @@
           <th><p >MEMORIA RAM (GB)</p></th>
           <th><p >ANCHO DE BANDA (GB/s)</p></th>
           <th><p >CONSUMO (W)</p></th>
-          {if $usuario}
+          <th><p >DETALLES</p></th>
+          {if $superAdmin}
           <th><p ></p></th>
           {/if}
         </tr>
@@ -38,7 +39,18 @@
           <td><p>{$producto['memoria']}</p></td>
           <td><p>{$producto['banda']}</p></td>
           <td><p>{$producto['consumo']}</p></td>
-          {if $usuario}
+          <td>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+              <div class="borrarEditarCentrado">
+                <div class="enLinea">
+                  <a href="{$producto['id']}" class="mostrarProducto" name="{$superAdmin}">
+                    <p><span id="mostrar" class="fa fa-info-circle" aria-hidden="true" value="0"></span></p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </td>
+          {if $superAdmin}
           <td>
             <div class="col-xs-12 col-sm-12 col-md-12">
               <div class="borrarEditarCentrado">
@@ -60,7 +72,7 @@
         {/foreach}
       </table>
     </div>
-    {if $usuario}
+    {if $superAdmin}
     <div class="row">
       <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 formulario">
         <div class="msj">
@@ -68,7 +80,7 @@
 
             <div class="panel-body">
 
-              <form href="guardarProducto" class="formFiltrar">
+              <form href="guardarProducto" class="formFiltrar" enctype="multipart/form-data">
 
                 <div class="form-group">
                   <label for="id_marca">Seleccione una marca</label>
@@ -81,23 +93,27 @@
                 </div>
                 <div class="form-group">
                   <label for="modelo">Modelo</label>
-                  <input type="text" class="form-control" id="modelo" name="modelo"  placeholder="Modelo de VGA">
+                  <input type="text" class="form-control" id="modelo" name="modelo"  placeholder="Modelo de VGA"></input>
                 </div>
                 <div class="form-group">
                   <label for="memoria">Memoria</label>
-                  <input type="text" class="form-control" id="memoria" name="memoria"  placeholder="Memoria">
+                  <input type="text" class="form-control" id="memoria" name="memoria"  placeholder="Memoria"></input>
                 </div>
                 <div class="form-group">
                   <label for="banda">Ancho de Banda</label>
-                  <input type="text" class="form-control" id="banda" name="banda"  placeholder="Ancho de Banda">
+                  <input type="text" class="form-control" id="banda" name="banda"  placeholder="Ancho de Banda"></input>
                 </div>
                 <div class="form-group">
                   <label for="consumo">Consumo</label>
-                  <input type="text" class="form-control" id="consumo" name="consumo"  placeholder="Consumo">
+                  <input type="text" class="form-control" id="consumo" name="consumo"  placeholder="Consumo"></input>
+                </div>
+                <div class="form-group">
+                  <label for="consumo">Adjuntar Imagen</label>
+                  <input type="file" class="form-control" id="consumo" name="imagenproducto[]"  value="" multiple></input>
                 </div>
 
                 <input type="submit" class="btn btn-default" value="Crear">
-                <div class="panel-footer">
+                <div>
                   {if isset($error)}
                   <div class="alert alert-danger" role="alert">{$error}</div>
                   {/if}
@@ -162,7 +178,7 @@
                   <input type="text" class="form-control" id="marca" name="marca"  placeholder="Marca ej:msi">
                 </div>
                 <input type="submit" class="btn btn-default" value="Crear">
-                <div class="panel-footer">
+                <div>
                   {if isset($error)}
                   <div class="alert alert-danger" role="alert">{$error}</div>
                   {/if}

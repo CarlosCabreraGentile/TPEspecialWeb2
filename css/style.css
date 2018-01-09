@@ -222,6 +222,14 @@ label {
     -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
     box-shadow: 0 1px 1px rgba(0,0,0,.05);
 }
+.panelComentarios {
+    margin-bottom: 35px;
+    background-color: rgba(177, 177, 177, 0.6);
+    border: 1px solid transparent;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+}
 .alert-success {
     color: #1c581d;
     background-color: #90f566;
@@ -320,6 +328,16 @@ label {
     font-family: 'robotothin', "Lucida Sans Unicode";
 }
 
+.detalleProducto{
+    margin: 10px;
+}
+
+.eliminarImagen{
+    margin-bottom: 5px;
+}
+
+
+
 .alineacionfoto a img{
   padding-left: 30px;
 }
@@ -376,6 +394,8 @@ p{
     margin-bottom: 5px;
     color: white;
 }
+
+
 
 .footer_redes a {
     background: #1f2428 none repeat scroll 0 0;

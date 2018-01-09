@@ -43,9 +43,12 @@
 							<li><a >Usuario: {$usuario}</a></li>
 							{else}
 							<li><a class="link-ajax" href="login">Log In</a></li>
+							<li><a class="link-ajax" href="registrarse">Register</a></li>
+							{/if}
+							{if $superAdmin}
+							<li><a class="link-ajax" href="listaUsuarios">Lista Usuarios</a></li>
 							{/if}
 						</ul>
 					</div><!-- /.navbar-collapse -->
 				</div><!-- /.container-fluid -->
 			</nav>
-
